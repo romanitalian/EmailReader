@@ -1,0 +1,14 @@
+{
+    "name": "romanitalian/email-reader",
+    "description": "EmailReader (romanitalian.github.io)",
+    "type": "php",
+    "license": "apache 2.0",
+    "authors": [
+        {
+            "name": "romanitalian",
+            "email": "romanitalian.net@gmail.com"
+        }
+    ],
+    "minimum-stability": "beta",
+    "require": {}
+}
