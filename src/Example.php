@@ -5,7 +5,7 @@
  */
 class Example
 {
-    /** @var  EmailReader */
+    /** @var  Email\Reader */
     public $reader;
     /** @var  Auth */
     public $auth;
@@ -20,7 +20,7 @@ class Example
      */
     public function getUnsen()
     {
-        return EmailReader::getInstance()->setAuth($this->auth)->loadAndParseInbox()->content;
+        return Email\Reader::getInstance()->setAuth($this->auth)->loadAndParseInbox()->content;
     }
 
     /**
@@ -28,6 +28,6 @@ class Example
      */
     public function getInboxAll()
     {
-        return EmailReader::getInstance()->setAuth($this->auth)->loadAndParseInboxAll()->content;
+        return Email\Reader::getInstance()->setAuth($this->auth)->loadAndParseInboxAll()->content;
     }
 }

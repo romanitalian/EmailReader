@@ -2,8 +2,8 @@
 require_once 'autoload.php';
 
 $Auth = new Auth();
-$Auth->user = 'test@yandex.ru';
-$Auth->pass = '123456';
+$Auth->user = 'your_email@yandex.ru';
+$Auth->pass = '123412341';
 $Auth->server = array('inbox' => '{imap.yandex.ru:993/imap/ssl}INBOX');
 
 $Example = new Example($Auth);

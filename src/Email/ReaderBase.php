@@ -1,10 +1,11 @@
 <?php
 
+namespace Email;
 /**
  * Class EmailReaderBase
  * Specific reader and adapter - get UNSEEN email from INBOX, parse it and return array (as adapter)
  */
-class EmailReaderBase
+class ReaderBase
 {
     public $inbox = array();
     protected $conn;

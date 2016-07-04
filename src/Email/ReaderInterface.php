@@ -1,12 +1,13 @@
 <?php
 
+namespace Email;
 /**
  * Class EmailReaderInterface
  */
-interface EmailReaderInterface
+interface ReaderInterface
 {
     /**
-     * @return EmailReaderBase
+     * @return ReaderBase
      */
     public function getReader();
 }

@@ -1,5 +1,7 @@
 <?php
 
+namespace Email;
+
 /**
  * Class EmailReader
  *
@@ -7,7 +9,7 @@
  * Расширяется через дочерние классы, у которых (изначально), только разыне коннекты.
  * Эти дочерние классы могут расширяться через @overload method
  */
-class EmailReader extends Singleton implements EmailReaderInterface
+class Reader extends \Singleton implements ReaderInterface
 {
     //protected $user = '';
     //protected $pass = '';
@@ -16,7 +18,7 @@ class EmailReader extends Singleton implements EmailReaderInterface
     protected $auth;
     public $inbox;
     public $content = array();
-    /** @var  EmailReaderBase */
+    /** @var  ReaderBase */
     public $reader;
 
     public function setAuth($auth)
@@ -26,14 +28,14 @@ class EmailReader extends Singleton implements EmailReaderInterface
     }
 
     /**
-     * @return EmailReaderBase
+     * @return ReaderBase
      */
     public function getReader()
     {
         // use singleton for: cache php-email resurse
         $that = self::getInstance();
         if (!$this->reader) {
-            $that->reader = new EmailReaderBase($that->auth->server, $that->auth->user, $that->auth->pass);
+            $that->reader = new ReaderBase($that->auth->server, $that->auth->user, $that->auth->pass);
         }
         return $that->reader;
     }
