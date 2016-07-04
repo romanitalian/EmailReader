@@ -4,7 +4,7 @@ spl_autoload_register('autoload', true);
  * @param $class
  * @param null|string $dir
  */
-function autoload($class, $dir = 'src/')
+function autoload($class, $dir = null)
 {
     if (is_null($dir)) {
         $dir = __DIR__ . DIRECTORY_SEPARATOR;

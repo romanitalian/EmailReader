@@ -1,5 +1,5 @@
 <?php
-require_once 'autoload.php';
+require_once 'src/autoload.php';
 
 $Auth = new Auth();
 $Auth->user = 'your_email@yandex.ru';
